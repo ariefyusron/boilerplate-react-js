@@ -4,8 +4,10 @@ import { useHistory } from "react-router-dom";
 import "./styles.css";
 import { ICONS } from "../../configs";
 import { Button } from "../../components";
+import { documentTitle } from "../../utils";
 
 const Home = () => {
+  documentTitle("Home");
   const history = useHistory();
 
   return (

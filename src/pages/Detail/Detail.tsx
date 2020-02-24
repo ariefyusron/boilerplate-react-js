@@ -3,8 +3,10 @@ import { useHistory } from "react-router-dom";
 
 import "./styles.css";
 import { Button } from "../../components";
+import { documentTitle } from "../../utils";
 
 const Detail = () => {
+  documentTitle("Detail");
   const history = useHistory();
 
   return (
