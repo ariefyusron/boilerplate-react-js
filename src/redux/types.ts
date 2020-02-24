@@ -19,9 +19,15 @@ export interface Action {
 // combine reducers
 export interface Reducers {
   home: HomeState;
+  detail: DetailState;
 }
 
 // reducers
 export interface HomeState {
   count: number;
+}
+
+export interface DetailState {
+  data: [];
+  isLoading: boolean;
 }
