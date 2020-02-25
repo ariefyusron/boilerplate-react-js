@@ -1,16 +1,22 @@
-import React, { BaseSyntheticEvent, ReactChild, memo } from "react";
+import React, { CSSProperties, ReactNode, SyntheticEvent, memo } from "react";
 
 import "./styles.css";
 
 interface Props {
-  children: ReactChild;
+  children: ReactNode;
   disabled?: boolean;
-  onPress?: (e: BaseSyntheticEvent) => void;
+  onPress?: (e: SyntheticEvent) => void;
+  className?: string;
+  style?: CSSProperties;
 }
 
-const Button = ({ children, disabled, onPress }: Props) => {
+const Button = ({ children, disabled, onPress, className, style }: Props) => {
   return !disabled ? (
-    <div className="button-container" onClick={onPress}>
+    <div
+      className={`button-container ${className}`}
+      onClick={onPress}
+      style={style}
+    >
       {children}
     </div>
   ) : (
