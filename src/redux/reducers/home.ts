@@ -2,7 +2,7 @@ import { SAMPLE_ACTION } from "../actions";
 import { Action, HomeState } from "../types";
 
 const initialState: HomeState = {
-  count: 1
+  count: 5
 };
 
 export default (state = initialState, { type, payload }: Action) => {

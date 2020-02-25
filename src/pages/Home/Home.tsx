@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import "./styles.css";
 import { ICONS } from "../../configs";
-import { Button } from "../../components";
+import { Button, InfiniteScroll } from "../../components";
 import { documentTitle } from "../../utils";
 
 // action && type redux
@@ -22,20 +22,24 @@ const Home = () => {
   }, [dispatch]);
 
   return (
-    <div className="home-container">
-      <header className="home-header">
-        <img src={ICONS.logo} className="home-logo" alt="logo" />
-        <p>
-          {"Edit "}
-          <code>src/App.tsx</code>
-          {" and save to reload."}
-        </p>
-        <h3>{homeState.count}</h3>
-        <Button onPress={() => history.push("/detail")}>
-          <h2 className="home-link">Go To Detail</h2>
-        </Button>
-      </header>
-    </div>
+    <InfiniteScroll onEndReached={() => dispatch(sampleAction())}>
+      {[...Array(homeState.count)].map((item, index) => (
+        <div className="home-container" key={index}>
+          <header className="home-header">
+            <img src={ICONS.logo} className="home-logo" alt="logo" />
+            <p>
+              {"Edit "}
+              <code>src/App.tsx</code>
+              {" and save to reload."}
+            </p>
+            <h3>{index}</h3>
+            <Button onPress={() => history.push("/detail")}>
+              <h2 className="home-link">Go To Detail</h2>
+            </Button>
+          </header>
+        </div>
+      ))}
+    </InfiniteScroll>
   );
 };
 

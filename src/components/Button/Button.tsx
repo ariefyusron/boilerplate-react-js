@@ -1,4 +1,4 @@
-import React, { BaseSyntheticEvent, ReactChild } from "react";
+import React, { BaseSyntheticEvent, ReactChild, memo } from "react";
 
 import "./styles.css";
 
@@ -22,4 +22,4 @@ Button.defaultProps = {
   disabled: false
 };
 
-export default Button;
+export default memo(Button);

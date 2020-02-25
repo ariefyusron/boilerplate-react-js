@@ -1,9 +1,15 @@
-import React, { ReactElement, ReactNode, useEffect } from "react";
+import React, {
+  ReactElement,
+  ReactNode,
+  memo,
+  useCallback,
+  useEffect
+} from "react";
 
 interface Props {
   children: ReactNode;
-  isEmpty: boolean;
-  emptyComponent: () => ReactElement;
+  isEmpty?: boolean;
+  emptyComponent?: () => ReactElement;
   onEndReached?: () => void;
 }
 
@@ -13,15 +19,15 @@ const WrapList = ({
   emptyComponent,
   onEndReached
 }: Props) => {
-  const _runFunc = () => {
+  const _runFunc = useCallback(() => {
     if (
       document.documentElement.scrollHeight -
-        document.documentElement.offsetHeight ===
+        document.documentElement.clientHeight ===
       window.scrollY
     ) {
       onEndReached!();
     }
-  };
+  }, [onEndReached]);
 
   useEffect(() => {
     if (onEndReached) {
@@ -33,9 +39,9 @@ const WrapList = ({
         window.removeEventListener("scroll", _runFunc);
       }
     };
-  }, []);
+  }, [_runFunc, onEndReached]);
 
-  return isEmpty ? <>{emptyComponent()}</> : <>{children}</>;
+  return isEmpty ? emptyComponent!() : <>{children}</>;
 };
 
-export default WrapList;
+export default memo(WrapList);
