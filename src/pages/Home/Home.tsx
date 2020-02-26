@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -21,8 +21,12 @@ const Home = () => {
     dispatch(sampleAction());
   }, [dispatch]);
 
+  const _loadMore = useCallback(() => {
+    dispatch(sampleAction());
+  }, [dispatch]);
+
   return (
-    <InfiniteScroll onEndReached={() => dispatch(sampleAction())}>
+    <InfiniteScroll onEndReached={_loadMore}>
       {[...Array(homeState.count)].map((item, index) => (
         <div className="home-container" key={index}>
           <header className="home-header">

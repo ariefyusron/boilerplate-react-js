@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -20,16 +20,24 @@ const Detail = () => {
     dispatch(getSeasons());
   }, [dispatch]);
 
+  const _count = useCallback(() => {
+    dispatch(sampleAction());
+  }, [dispatch]);
+
+  const _backToHome = useCallback(() => {
+    history.push("/");
+  }, [history]);
+
   return (
     <div>
       <h1>Ini Detail</h1>
       <h2>{`Count ${homeState.count}`}</h2>
 
-      <Button onPress={() => dispatch(sampleAction())}>
+      <Button onPress={_count}>
         <h2 className="detail-link">Count</h2>
       </Button>
 
-      <Button onPress={() => history.push("/")}>
+      <Button onPress={_backToHome}>
         <h2 className="detail-link">Back to Home</h2>
       </Button>
     </div>
