@@ -2,7 +2,7 @@ import React, { useCallback, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
-import "./styles.css";
+import "./styles.scss";
 import { ICONS } from "../../configs";
 import { Button, InfiniteScroll } from "../../components";
 import { documentTitle } from "../../utils";

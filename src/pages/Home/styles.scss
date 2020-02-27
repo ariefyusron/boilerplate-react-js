@@ -1,3 +1,5 @@
+@import "../../sass/color";
+
 .home-container {
   text-align: center;
 }
@@ -14,18 +16,18 @@
 }
 
 .home-header {
-  background-color: #282c34;
+  background-color: $background;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: $white;
 }
 
 .home-link {
-  color: #61dafb;
+  color: $blue;
   text-decoration: underline;
 }
 
@@ -33,6 +35,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

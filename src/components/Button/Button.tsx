@@ -1,6 +1,6 @@
 import React, { CSSProperties, ReactNode, SyntheticEvent, memo } from "react";
 
-import "./styles.css";
+import "./styles.scss";
 
 interface Props {
   children: ReactNode;
