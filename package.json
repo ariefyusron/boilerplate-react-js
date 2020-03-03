@@ -27,7 +27,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint --ext .js,.ts,.tsx . && sass-lint -c .sass-lint.yml 'src/**/*.scss'"
+    "lint": "eslint --ext .js,.ts,.tsx src --cache && sass-lint -c .sass-lint.yml 'src/**/*.scss'"
   },
   "eslintConfig": {
     "extends": "react-app"
