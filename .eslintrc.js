@@ -16,6 +16,9 @@ module.exports = {
     "array-callback-return": "off",
     "jsx-a11y/no-static-element-interactions": "off",
     "jsx-a11y/click-events-have-key-events": "off",
-    "@typescript-eslint/no-non-null-assertion": "off"
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "no-param-reassign": "off",
+    "max-len": "off",
+    "jsx-a11y/label-has-associated-control": "off"
   }
 };
