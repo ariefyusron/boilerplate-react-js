@@ -1,3 +1,3 @@
-import InfiniteScroll from "./InfiniteScroll";
+import Component from "./Component";
 
-export default InfiniteScroll;
+export default Component;

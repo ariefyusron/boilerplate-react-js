@@ -11,7 +11,7 @@ import { documentTitle } from "../../utils";
 import { sampleAction } from "../../redux/actions";
 import { Reducers } from "../../redux/types";
 
-const Home = () => {
+const Component = () => {
   documentTitle("Home");
   const history = useHistory();
   const dispatch = useDispatch();
@@ -47,4 +47,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Component;

@@ -1,3 +1,3 @@
-import Detail from "./Detail";
+import Component from "./Component";
 
-export default Detail;
+export default Component;

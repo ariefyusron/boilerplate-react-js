@@ -13,7 +13,7 @@ interface Props {
   onEndReached?: () => void;
 }
 
-const WrapList = ({
+const Component = ({
   isEmpty,
   children,
   emptyComponent,
@@ -44,4 +44,4 @@ const WrapList = ({
   return isEmpty ? emptyComponent!() : <>{children}</>;
 };
 
-export default memo(WrapList);
+export default memo(Component);

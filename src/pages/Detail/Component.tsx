@@ -10,7 +10,7 @@ import { documentTitle } from "../../utils";
 import { getSeasons, sampleAction } from "../../redux/actions";
 import { Reducers } from "../../redux/types";
 
-const Detail = () => {
+const Component = () => {
   documentTitle("Detail");
   const history = useHistory();
   const dispatch = useDispatch();
@@ -44,4 +44,4 @@ const Detail = () => {
   );
 };
 
-export default Detail;
+export default Component;

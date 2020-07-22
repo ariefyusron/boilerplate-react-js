@@ -10,7 +10,13 @@ interface Props {
   style?: CSSProperties;
 }
 
-const Button = ({ children, disabled, onPress, className, style }: Props) => {
+const Component = ({
+  children,
+  disabled,
+  onPress,
+  className,
+  style
+}: Props) => {
   return !disabled ? (
     <div
       className={`button-container ${className}`}
@@ -24,8 +30,8 @@ const Button = ({ children, disabled, onPress, className, style }: Props) => {
   );
 };
 
-Button.defaultProps = {
+Component.defaultProps = {
   disabled: false
 };
 
-export default memo(Button);
+export default memo(Component);
