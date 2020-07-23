@@ -3,7 +3,6 @@ import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 import "./styles.scss";
-import { Button } from "../../components";
 import { documentTitle } from "../../utils";
 
 // action & types redux
@@ -33,13 +32,13 @@ const Component = () => {
       <h1>Ini Detail</h1>
       <h2>{`Count ${homeState.count}`}</h2>
 
-      <Button onPress={_count}>
+      <button type="button" onClick={_count}>
         <h2 className="detail-link">Count</h2>
-      </Button>
+      </button>
 
-      <Button onPress={_backToHome}>
+      <button type="button" onClick={_backToHome}>
         <h2 className="detail-link">Back to Home</h2>
-      </Button>
+      </button>
     </div>
   );
 };
