@@ -27,11 +27,11 @@ const Component = () => {
 
   return (
     <InfiniteScroll onEndReached={_loadMore}>
-      <div>
+      <div className="page-home">
         {[...Array(homeState.count)].map((item, index) => (
-          <div className="home-container" key={index}>
-            <header className="home-header">
-              <img src={ICONS.logo} className="home-logo" alt="logo" />
+          <div className="container" key={index}>
+            <header className="header">
+              <img src={ICONS.logo} className="logo" alt="logo" />
               <p>
                 {"Edit "}
                 <code>src/App.tsx</code>
@@ -39,7 +39,7 @@ const Component = () => {
               </p>
               <h3>{index}</h3>
               <button type="button" onClick={() => history.push("/detail")}>
-                <h2 className="home-link">Go To Detail</h2>
+                <h2 className="link">Go To Detail</h2>
               </button>
             </header>
           </div>

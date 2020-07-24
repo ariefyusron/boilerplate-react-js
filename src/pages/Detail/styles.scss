@@ -1,6 +1,8 @@
 @import "../../sass/color";
 
-.detail-link {
-  color: $blue;
-  text-decoration: underline;
+.page-detail {
+  .link {
+    color: $blue;
+    text-decoration: underline;
+  }
 }

@@ -28,16 +28,16 @@ const Component = () => {
   }, [history]);
 
   return (
-    <div>
+    <div className="page-detail">
       <h1>Ini Detail</h1>
       <h2>{`Count ${homeState.count}`}</h2>
 
       <button type="button" onClick={_count}>
-        <h2 className="detail-link">Count</h2>
+        <h2 className="link">Count</h2>
       </button>
 
       <button type="button" onClick={_backToHome}>
-        <h2 className="detail-link">Back to Home</h2>
+        <h2 className="link">Back to Home</h2>
       </button>
     </div>
   );
