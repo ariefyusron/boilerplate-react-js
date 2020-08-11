@@ -19,6 +19,7 @@ module.exports = {
     "@typescript-eslint/no-non-null-assertion": "off",
     "no-param-reassign": "off",
     "max-len": "off",
-    "jsx-a11y/label-has-associated-control": "off"
+    "jsx-a11y/label-has-associated-control": "off",
+    "import/no-anonymous-default-export": "off"
   }
 };

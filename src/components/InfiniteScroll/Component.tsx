@@ -3,7 +3,7 @@ import React, {
   ReactNode,
   memo,
   useCallback,
-  useEffect
+  useEffect,
 } from "react";
 
 interface Props {
@@ -17,7 +17,7 @@ const Component = ({
   isEmpty,
   children,
   emptyComponent,
-  onEndReached
+  onEndReached,
 }: Props) => {
   const _runFunc = useCallback(() => {
     if (

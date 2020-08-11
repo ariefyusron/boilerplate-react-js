@@ -1,13 +1,13 @@
 import {
   GET_SEASON_ERROR,
   GET_SEASON_PENDING,
-  GET_SEASON_SUCCESS
+  GET_SEASON_SUCCESS,
 } from "../actions";
 import { Action, DetailState } from "../types";
 
 const initialState: DetailState = {
   data: [],
-  isLoading: false
+  isLoading: false,
 };
 
 export default (state = initialState, { type, payload }: Action) => {
