@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
-  "extends": "react-native-wcandillon",
-  "rules": {
+  extends: "react-native-wcandillon",
+  rules: {
     "react/no-array-index-key": "off",
     "react/jsx-no-bind": "off",
     "import/prefer-default-export": "off",
