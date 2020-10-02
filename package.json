@@ -29,6 +29,11 @@
     "eject": "react-scripts eject",
     "lint": "eslint --ext .js,.ts,.tsx src --cache && sass-lint -c .sass-lint.yml 'src/**/*.scss'"
   },
+  "resolutions": {
+    "**/**/serialize-javascript": "^3.1.0",
+    "**/**/minimist": "^0.2.0",
+    "**/**/yargs-parser": "^13.1.2"
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
