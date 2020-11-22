@@ -19,6 +19,7 @@ module.exports = {
     "no-param-reassign": "off",
     "max-len": "off",
     "jsx-a11y/label-has-associated-control": "off",
-    "import/no-anonymous-default-export": "off"
+    "import/no-anonymous-default-export": "off",
+    "react-hooks/rules-of-hooks": "off"
   }
 };
