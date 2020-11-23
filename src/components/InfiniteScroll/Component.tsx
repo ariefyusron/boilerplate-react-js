@@ -44,4 +44,10 @@ const Component = ({
   return isEmpty ? emptyComponent!() : <>{children}</>;
 };
 
+Component.defaultProps = {
+  isEmpty: false,
+  emptyComponent: () => null,
+  onEndReached: () => null,
+};
+
 export default memo(Component);

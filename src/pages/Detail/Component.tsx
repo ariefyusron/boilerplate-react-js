@@ -4,8 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 
 import "./styles.scss";
 import { documentTitle } from "../../utils";
-
-// action & types redux
 import { getSeasons, sampleAction } from "../../redux/actions";
 import { Reducers } from "../../redux/types";
 

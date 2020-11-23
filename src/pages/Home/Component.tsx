@@ -6,8 +6,6 @@ import "./styles.scss";
 import { ICONS } from "../../configs";
 import { InfiniteScroll } from "../../components";
 import { documentTitle } from "../../utils";
-
-// action && type redux
 import { sampleAction } from "../../redux/actions";
 import { Reducers } from "../../redux/types";
 

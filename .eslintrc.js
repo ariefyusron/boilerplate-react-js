@@ -20,6 +20,13 @@ module.exports = {
     "max-len": "off",
     "jsx-a11y/label-has-associated-control": "off",
     "import/no-anonymous-default-export": "off",
-    "react-hooks/rules-of-hooks": "off"
-  }
+    "react-hooks/rules-of-hooks": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars-experimental": ["error", { ignoreArgsIfArgsAfterAreUsed: true }],
+    "no-unused-vars": "off",
+    "react/require-default-props": "error",
+    "@typescript-eslint/ban-types": "off",
+    "comma-dangle": "off"
+  },
 };

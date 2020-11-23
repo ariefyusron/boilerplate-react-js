@@ -5,7 +5,7 @@ const queryString = (string: string) => {
       `{"${decodeURI(search)
         .replace(/"/g, '\\"')
         .replace(/&/g, '","')
-        .replace(/=/g, '":"')}"}`
+        .replace(/[=]/g, '":"')}"}`
     );
   }
   return null;
