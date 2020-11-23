@@ -1,4 +1,4 @@
-# React JS Boilerplate (TypeScript) v1.2.x
+# React JS Boilerplate (TypeScript) v2.0.x
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
