@@ -27,6 +27,9 @@ module.exports = {
     "no-unused-vars": "off",
     "react/require-default-props": "error",
     "@typescript-eslint/ban-types": "off",
-    "comma-dangle": "off"
+    "comma-dangle": "off",
+    "prettier/prettier": ["error", {
+      "endOfLine":"auto"
+    }]
   },
 };
