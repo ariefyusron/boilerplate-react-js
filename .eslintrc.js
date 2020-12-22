@@ -30,6 +30,7 @@ module.exports = {
     "comma-dangle": "off",
     "prettier/prettier": ["error", {
       "endOfLine":"auto"
-    }]
+    }],
+    "@typescript-eslint/no-var-requires": "off"
   },
 };
